@@ -1,0 +1,24 @@
+.nav, .navbar {
+    background-color: #fff8ed !important;
+}
+
+a.nav-link{
+    color: #ff9256 !important;
+}
+
+.navbar-brand {
+    color: #769642;
+    font-size: clamp(32px, 5vw + 1em, 55px);
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.NavPanel {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.navbar-nav, .navbar-brand {
+    margin: 0 !important;
+}

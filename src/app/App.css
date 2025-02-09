@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  background-color: #606C38;
+  background-color: #fff8ed;
+  color: #283618;
+  max-width: 980px;
+  width: 100%; 
+  margin: 0 auto;
+  padding: 15px;
+}
