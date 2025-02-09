@@ -1,0 +1,69 @@
+.seminars-container {
+    color: #638035;
+    min-height: 76dvh;
+}
+.seminars-container .form-control{
+    background-color: #fff8ed;
+    color: #638035;
+    border: 2px solid #bfdf8c;
+    height: 50px;
+}
+
+.sort-btn {
+    color: #769642;
+}
+
+.custom-btn {
+    background-color: #ff9256;
+    color: #638035;
+    border: none; 
+    border-radius: 7px; 
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.edit-btn {
+    background-color: #d1c1ef;
+}
+.add-btn {
+    background-color: #bfdf8c;
+}
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Стили для элементов внутри аккордеона */
+.accordion-item {
+    border: 0;
+    background-color: #fff8ed;
+}
+
+.accordion-button {
+    background-color: #bfdf8c;
+    color: #638035;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #638035;
+    color: #fff8ed;
+}
+
+.accordion-body {
+    background-color: #ff9256;
+}
+
+.accordion-body .card {
+    background-color: #fff8ed;
+    border: 2px solid #638035;
+}
+.accordion-body .card p.fs-4 {
+    
+    color: #638035;
+}
+.accordion-body .card p.fs-6 {
+    
+    color: #769642;
+}

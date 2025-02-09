@@ -21,6 +21,11 @@ p {
   margin-top: 40px;
   color: #555;
 }
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 /* Цвета для разных карточек */
 .color-1, .color-1 .card-body .card-text {

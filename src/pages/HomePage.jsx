@@ -36,7 +36,7 @@ const HomePage = () => {
         },
     ]
     return (
-        <Container className='mb-5'>
+        <Container className='mb-5 home-container'>
             <Row className="text-center pb-5">
                 <h1>Добро пожаловать в Менеджер Семинаров</h1>
                 <p>
