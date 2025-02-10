@@ -74,6 +74,14 @@ const HomePage = () => {
                     </Col>
                 ))}
             </Row>
+            <a href="/seminars">
+                <button 
+                    className='add-btn custom-btn p-3 m-5' 
+                    style={{width: '50vw', maxWidth: '730px'}}
+                >
+                    ✨Попробовать!✨
+                </button>
+            </a>
         </Container>
     );
 };

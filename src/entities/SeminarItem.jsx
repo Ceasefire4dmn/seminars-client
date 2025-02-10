@@ -7,7 +7,7 @@ const SeminarItem = ({ seminar, onEdit, onDelete }) => {
         <Accordion.Item eventKey={seminar.id}>
             <Accordion.Header>{seminar.title} ({seminar.date})</Accordion.Header>
             <Accordion.Body>
-                <Card className="d-flex flex-row">
+                <Card className="d-flex flex-row seminar-body ">
                     <Card.Img
                         className="p-2"
                         variant="top"

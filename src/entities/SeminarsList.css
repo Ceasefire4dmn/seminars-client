@@ -78,3 +78,36 @@
     color: #769642;
 }
 
+/* Стили для элементов внутри аккордеона */
+
+@media (max-width: 770px) {
+    .card {
+        align-items: center; 
+    }
+
+    .card .card-img-top {
+        height: 250px !important; 
+        width: 250px !important;
+    }
+
+    .control-panel {
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 10px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .control-panel button {
+        font-size: 0.8rem; 
+    }
+
+    .seminar-body {
+        display: flex;
+        flex-direction: column !important;
+        padding-top: 10px;
+    }
+
+}
