@@ -78,11 +78,17 @@
     color: #769642;
 }
 
-/* Стили для элементов внутри аккордеона */
+@media (max-width: 1000px) {
+
+    .control-panel {
+        gap: 10px !important;
+    }
+}
 
 @media (max-width: 770px) {
     .card {
         align-items: center; 
+        flex-direction: column !important; 
     }
 
     .card .card-img-top {
@@ -92,7 +98,6 @@
 
     .control-panel {
         flex-direction: column; 
-        align-items: center; 
         margin-top: 10px;
         gap: 10px;
     }
