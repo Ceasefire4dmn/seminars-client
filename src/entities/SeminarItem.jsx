@@ -1,9 +1,9 @@
-// SeminarItem.jsx
 import React from "react";
 import { Accordion, Card } from "react-bootstrap";
 
 const SeminarItem = ({ seminar, onEdit, onDelete }) => {
     return (
+        // Создаются элементы аккордиона, которые передаются в SeminarsList
         <Accordion.Item eventKey={seminar.id}>
             <Accordion.Header>{seminar.title} ({seminar.date})</Accordion.Header>
             <Accordion.Body>
@@ -23,6 +23,7 @@ const SeminarItem = ({ seminar, onEdit, onDelete }) => {
                             <strong>Дата:</strong> {seminar.date} &bull; <strong>Время:</strong> {seminar.time}
                         </p>
                         <span className="control-panel">
+                            {/* Через передаваемые в каждый элемент props обрабатываются операции редактирования и удаления */}
                             <button
                                 className="edit-btn custom-btn"
                                 onClick={onEdit}

@@ -3,6 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import './HomePage.css';
 
 const HomePage = () => {
+    // Массив данных для ознакомительных карточек
     const seminars = [
         {
             id: 1,
@@ -11,8 +12,8 @@ const HomePage = () => {
         },
         {
             id: 2,
-            title: 'Добавляй свои семинары',
-            description: 'Создавай таким семинары, какие хочешь. 🤝',
+            title: 'Выбирай подходящие семинары',
+            description: 'Выбирай такие семинары, какие интересны лишь тебе. 🤝',
         },
         {
             id: 3,
@@ -35,6 +36,7 @@ const HomePage = () => {
             description: 'Мы делаем сервис доступным и приятным для вас! 🔧',
         },
     ]
+
     return (
         <Container className='mb-5 home-container'>
             <Row className="text-center pb-5">
@@ -45,19 +47,24 @@ const HomePage = () => {
                     Хотите быть в курсе всех актуальных мероприятий? Это приложение поможет вам!
                 </p>
                 <p>
-                    Узнайте больше о моей квалификации и опыте, посетив <a href="Resume" target="_blank" rel="noopener noreferrer"> сайт с моим резюме</a>.
+                    Узнайте больше о моей квалификации и опыте, посетив <a style={{ 'color': '#ff9256' }} href="https://docs.google.com/document/d/1gM3FAh8T-FcvFQSiQIFF9Zh0oZMnuNGTZiEqqj3JaDw/edit?usp=sharing" target="_blank" rel="noopener noreferrer"> сайт с моим резюме</a>.
                 </p>
             </Row>
             <Row className="justify-content-center">
                 {
                     seminars.map((seminar, index) =>  (
-                    <Col xs={12} md={4} lg={4} className="d-flex justify-content-center" key={seminar.id}>
-                        <Card
-                            className={`card-box py-4 ${index === 0 || index === 5 ? 'color-1' :
-                                index === 1 || index === 3 ? 'color-2' : 'color-3'}`}
-                        >
+                    <Col 
+                        xs={12} 
+                        md={4} 
+                        lg={4} 
+                        className="d-flex justify-content-center" 
+                        key={seminar.id}
+                    >
+                        <Card className={`card-box py-4 ${index === 0 || index === 5 ? 'color-1' : index === 1 || index === 3 ? 'color-2' : 'color-3'}`}>
                             <Card.Body>
-                                    <Card.Title>{seminar.title}</Card.Title>
+                                    <Card.Title>
+                                        {seminar.title}
+                                    </Card.Title>
                                 <Card.Text>
                                     {seminar.description}
                                 </Card.Text>

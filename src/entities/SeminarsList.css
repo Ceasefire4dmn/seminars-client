@@ -1,3 +1,4 @@
+/*  Контейнер */
 .seminars-container {
     color: #638035;
     min-height: 76dvh;
@@ -9,6 +10,7 @@
     height: 50px;
 }
 
+/* Кнопки */
 .sort-btn {
     color: #769642;
 }
@@ -24,12 +26,15 @@
     display: inline-block;
     font-size: 16px;
 }
+
 .edit-btn {
     background-color: #d1c1ef;
 }
+
 .add-btn {
     background-color: #bfdf8c;
 }
+
 .control-panel {
     display: flex;
     justify-content: space-between;
@@ -42,10 +47,15 @@
 }
 
 .accordion-button {
+    border: 1px solid #638035;
+    border-bottom: 0 !important;
     background-color: #bfdf8c;
     color: #638035;
 }
 
+.accordion {
+    border-bottom: 1px solid #638035; 
+}
 .accordion-button:not(.collapsed) {
     background-color: #638035;
     color: #fff8ed;
@@ -67,3 +77,4 @@
     
     color: #769642;
 }
+

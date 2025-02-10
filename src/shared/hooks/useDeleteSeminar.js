@@ -1,30 +1,45 @@
 import { useState } from "react";
 import { deleteSeminar } from "../../api/seminars"; // Импортируем функцию удаления
 
-const useDeleteSeminar = (seminars, setSeminars) => {
+// seminars - список семинаров для последующего обновления
+//  setSeminars - для обновления списка
+export const useDeleteSeminar = (seminars, setSeminars) => {
+  // Состояние открытия модального окна
   const [showModal, setShowModal] = useState(false);
+  //  Семинар, которы надо удалить
   const [seminarToDelete, setSeminarToDelete] = useState(null);
 
   const handleDelete = async () => {
+    // Если удалять нечего
     if (!seminarToDelete) return;
 
     try {
+      // Получаем Id семинара после удаления, чтобы обновить список
       const deletedId = await deleteSeminar(seminarToDelete.id);
-      setSeminars(seminars.filter((seminar) => seminar.id !== deletedId)); // Убираем удалённый семинар из списка
-      setShowModal(false); // Закрываем модальное окно после удаления
+      // Убираем удалённый семинар из списка
+      setSeminars(seminars.filter((seminar) => seminar.id !== deletedId));
+      // Закрываем модальное окно после удаления
+      setShowModal(false);
     } catch (error) {
+      // Обрабатываем ошибку
       console.error("Ошибка при удалении семинара:", error);
     }
   };
 
+  // Обработчик открытия модального окна
   const handleShowModal = (seminar) => {
-    setSeminarToDelete(seminar); // Запоминаем семинар, который будет удален
-    setShowModal(true); // Открываем модальное окно
+    // Устанавливаем семинар для удаления
+    setSeminarToDelete(seminar);
+    // Выставляем состояние открытия модального окнв
+    setShowModal(true);
   };
 
+// Обработчик закрытия окна 
   const handleCloseModal = () => {
-    setShowModal(false); // Закрываем модальное окно
-    setSeminarToDelete(null); // Сбрасываем выбранный семинар
+    // Выставляем состояние открытия модального окна на false
+    setShowModal(false);
+    // Сбрасываем семинар для удаления
+    setSeminarToDelete(null);
   };
 
   return {
@@ -36,4 +51,3 @@ const useDeleteSeminar = (seminars, setSeminars) => {
   };
 };
 
-export default useDeleteSeminar;

@@ -1,0 +1,15 @@
+/* Модальные окна */
+
+.edit-modal .modal-content {
+  background-color: #fff8ed;
+}
+.edit-modal .modal-body,
+.edit-modal .modal-header,
+.edit-modal .modal-footer {
+  border: 0;
+  border-radius: 6px;
+}
+.edit-modal .form-control {
+  background-color: #fff8ed;
+  border: 1px solid #ff9256; 
+}

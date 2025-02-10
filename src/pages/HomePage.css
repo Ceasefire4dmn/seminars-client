@@ -1,4 +1,10 @@
-/* HomePage.css */
+/* Контейнер */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #638035;
+}
 .card-box {
   width: 270px;
   height: 240px;
@@ -9,7 +15,7 @@
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+/* Текст */
 h1 {
   font-size: clamp(25px, 3vw + 1em, 35px);
   margin-bottom: 20px;
@@ -19,12 +25,7 @@ p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-top: 40px;
-  color: #555;
-}
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  color: #ff9256;
 }
 
 /* Цвета для разных карточек */

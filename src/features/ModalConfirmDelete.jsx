@@ -1,22 +1,41 @@
 import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import './Modal.css';
 
+// Модальное окно полтвердления удаления семинара
+// show - состояние открытия модального окна
+// onHide - функция при клике вне окна или отмене
+// onDelete - функция для удаления и отправки из родительского компонента запроса на сервер
+// seminarTitle - название семинара для подписи в модальном окне
 const ModalConfirmDelete = ({ show, onHide, onDelete, seminarTitle }) => {
     return (
-        <Modal show={show} onHide={onHide}>
+        <Modal 
+            show={show} 
+            onHide={onHide} 
+            centered 
+            className='edit-modal'
+        >
             <Modal.Header closeButton>
-                <Modal.Title>Подтверждение удаления</Modal.Title>
+                <Modal.Title>
+                    Подтверждение удаления
+                </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 Вы уверены, что хотите удалить семинар "{seminarTitle}"?
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={onHide}>
-                    Отмена
-                </Button>
-                <Button variant="danger" onClick={onDelete}>
+                <button 
+                    className="px-4 custom-btn" 
+                    onClick={onDelete}
+                >
                     Удалить
-                </Button>
+                </button>
+                <button
+                    className="px-4 edit-btn custom-btn add-btn"
+                    onClick={onHide}
+                >
+                    Закрыть
+                </button>
             </Modal.Footer>
         </Modal>
     );

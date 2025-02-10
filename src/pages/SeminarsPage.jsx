@@ -1,5 +1,5 @@
 import React from "react";
-import SeminarList from "../entities/ui/SeminarList";
+import SeminarList from "../entities/SeminarList";
 
 
 const SeminarsPage = () => {
